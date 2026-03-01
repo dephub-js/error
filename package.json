@@ -56,13 +56,13 @@
   },
   "packageManager": "pnpm@10.30.3",
   "devDependencies": {
-    "@dephub/glob": "^1.0.0",
-    "@dephub/eslint-ts": "^1.0.0",
-    "@dephub/path": "^1.0.0",
-    "@types/node": "^24.3.1",
-    "eslint": "^9.37.0",
-    "typescript": "^5.9.2",
-    "vite": "^7.1.4",
+    "@dephub/eslint-ts": "^1.0.2",
+    "@dephub/glob": "^1.0.2",
+    "@dephub/path": "^1.0.2",
+    "@types/node": "^25.3.3",
+    "eslint": "^10.0.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
     "vite-plugin-dts": "^4.5.4"
   }
 }
