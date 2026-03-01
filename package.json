@@ -1,0 +1,68 @@
+{
+  "name": "@dephub/error",
+  "type": "module",
+  "version": "1.0.2",
+  "description": "Structured error handling for Node.js and browsers with TypeScript support, customizable codes, details, and consistent logging.",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublishOnly": "pnpm lint && pnpm check-types && pnpm build",
+    "release": "pnpm publish",
+    "docs": "lineo md 'src/**/*.ts' --outFile code.md --outDir temp",
+    "check-types": "tsc --noEmit --skipLibCheck",
+    "lint": "eslint . --fix --max-warnings 0",
+    "clean": "rm -rf dist",
+    "build": "vite build",
+    "dev": "vite build -w --mode development"
+  },
+  "keywords": [
+    "error",
+    "error-handling",
+    "typescript",
+    "nodejs",
+    "browser",
+    "structured-errors",
+    "error-codes",
+    "logging",
+    "dephub"
+  ],
+  "author": {
+    "name": "Estarlin R",
+    "email": "dev@estarlincito.com",
+    "url": "https://estarlincito.com"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dephub-js/error#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dephub-js/error.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dephub-js/error/issues"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {
+    "@dephub/logger": "^1.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@10.30.3",
+  "devDependencies": {
+    "@dephub/glob": "^1.0.0",
+    "@dephub/eslint-ts": "^1.0.0",
+    "@dephub/path": "^1.0.0",
+    "@types/node": "^24.3.1",
+    "eslint": "^9.37.0",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.4",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}
