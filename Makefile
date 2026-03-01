@@ -10,6 +10,7 @@ build:   ; $(RUN) build $(ARGS) ## Compile the project
 dev:     ; $(RUN) dev $(ARGS)   ## Start development server
 start:   ; $(RUN) start $(ARGS) ## Run the app in production mode
 lint:    ; $(RUN) lint          ## Run linter (ESLint/Prettier)
+fmt:     ; $(RUN) fmt           ## Run formater (Prettier)
 test:    ; $(RUN) test $(ARGS)  ## Run test suite
 types:   ; $(RUN) check-types   ## Run TypeScript type checking
 clean:   ; $(RUN) clean         ## Remove build artifacts and temp files
@@ -27,6 +28,7 @@ b:  build
 d:  dev
 s:  start
 l:  lint
+f:  fmt
 t:  test
 ts: types
 c:  clean
@@ -35,4 +37,4 @@ do: docs
 
 # .PHONY ensures these commands run even if a folder with the same name exists
 .PHONY: release build dev start lint test types clean pack docs install update \
-        i u b d s l t ts c pk do
+        i u b d s l f t ts c pk do
