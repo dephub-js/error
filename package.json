@@ -1,18 +1,22 @@
 {
   "name": "@dephub/error",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Structured error handling for Node.js and browsers with TypeScript support, customizable codes, details, and consistent logging.",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "scripts": {
-    "prepublishOnly": "pnpm lint && pnpm check-types && pnpm build",
+    "prepublishOnly": "pnpm check && pnpm test && pnpm build",
     "release": "pnpm publish",
     "docs": "lineo md 'src/**/*.ts' --outFile code.md --outDir temp",
+    "test": "node --test",
+    "check": "pnpm fmt && pnpm lint && pnpm check-types",
     "check-types": "tsc --noEmit --skipLibCheck",
     "lint": "eslint . --fix --max-warnings 0",
     "fmt": "prettier --write .",
     "clean": "rm -rf dist",
+    "prepack": "pnpm check && pnpm build",
+    "pack": "pnpm pack",
     "build": "vite build",
     "dev": "vite build -w --mode development"
   },
@@ -46,25 +50,28 @@
   "bugs": {
     "url": "https://github.com/dephub-js/error/issues"
   },
-  "engines": {
-    "node": ">=22.5.0"
-  },
   "dependencies": {
-    "@dephub/logger": "^1.1.0"
+    "@dephub/logger": "^1.3.0"
   },
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "pnpm@10.30.3",
   "devDependencies": {
-    "@dephub/eslint-ts": "^1.0.2",
-    "@dephub/glob": "^1.0.2",
-    "@dephub/path": "^1.0.2",
-    "@types/node": "^25.3.3",
-    "eslint": "^10.0.2",
-    "prettier": "^3.8.1",
-    "typescript": "^5.9.3",
-    "vite": "^7.3.1",
-    "vite-plugin-dts": "^4.5.4"
-  }
+    "@dephub/eslint-ts": "^1.0.6",
+    "@dephub/glob": "^1.0.3",
+    "@dephub/path": "^2.0.1",
+    "@types/node": "^26.6.9",
+    "eslint": "^10.15.0",
+    "prettier": "^3.10.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.8",
+    "vite-plugin-dts": "^5.1.2"
+  },
+  "imports": {
+    "#/*": "./src/*"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "packageManager": "pnpm@10.30.3"
 }

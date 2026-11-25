@@ -1,6 +1,6 @@
 import { logger } from '@dephub/logger';
 
-import { DepHubError } from './error.js';
+import { DepHubError } from './error.ts';
 
 /**
  * Logs errors in a consistent format across the DepHub ecosystem

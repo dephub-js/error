@@ -1,4 +1,4 @@
-import type { ErrorDetails } from './create.js';
+import type { ErrorDetails } from './create.ts';
 
 /**
  * Standardized error class for DepHub ecosystem with enhanced capabilities

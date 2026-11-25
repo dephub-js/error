@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-object-type */
-import { DepHubError } from './error.js';
+import { DepHubError } from './error.ts';
 
 /**
  * Options for creating a DepHubError instance
